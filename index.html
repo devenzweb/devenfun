@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Singla Electric Store</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <h1>Singla Electric Store</h1>
+      <p>Near Punjab Bus Stand, Kalanwali</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Welcome to Singla Electric Store</h2>
+      <p>Your one-stop shop for premium electrical appliances</p>
+      <a href="#products" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>We provide top-quality electrical appliances with excellent customer service. Fans, lights, switches, wires, and more — all under one roof. Your satisfaction is our priority!</p>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="section">
+    <div class="container">
+      <h2>Our Products</h2>
+      <div class="products">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200?text=Fans" alt="Fans">
+          <h3>Fans</h3>
+          <p>Ceiling, Table, and Exhaust Fans</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200?text=Lights" alt="Lights">
+          <h3>Lights</h3>
+          <p>LED Bulbs, Tube Lights, Decorative Lamps</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200?text=Wires" alt="Wires">
+          <h3>Wires</h3>
+          <p>High-quality electrical wires & cables</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200?text=Switches" alt="Switches">
+          <h3>Switches</h3>
+          <p>Modular switches and accessories</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p><strong>Address:</strong> Near Punjab Bus Stand, Kalanwali</p>
+      <p><strong>Phone:</strong> <a href="tel:9541795413">9541795413</a></p>
+      <p><strong>Email:</strong> singlaelectric@example.com</p>
+      <p><strong>Google Maps:</strong> <a href="https://maps.google.com" target="_blank">View Location</a></p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© <span id="year"></span> Singla Electric Store. All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
