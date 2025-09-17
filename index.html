@@ -3,95 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Singla Electric Store</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Deven.fun 🎉</title>
+  <style>
+    /* Background Gradient Animation */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      text-align: center;
+      background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background: rgba(255,255,255,0.2);
+      border: 2px solid white;
+      color: white;
+      padding: 12px 24px;
+      margin: 10px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: white;
+      color: #333;
+      transform: scale(1.1);
+    }
+
+    #jokeBox {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #fffa;
+    }
+  </style>
 </head>
 <body>
+  <h1>Welcome to Deven.fun 🎉</h1>
+  <p>A place for fun, vibes & random craziness 🚀</p>
 
-  <!-- HEADER -->
-  <header>
-    <div class="container">
-      <h1>Singla Electric Store</h1>
-      <p>Near Punjab Bus Stand, Kalanwali</p>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <button onclick="showJoke()">Tell me a joke 😂</button>
+  <button onclick="changeColor()">Change Background 🌈</button>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Welcome to Singla Electric Store</h2>
-      <p>Your one-stop shop for premium electrical appliances</p>
-      <a href="#products" class="btn">Shop Now</a>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>We provide top-quality electrical appliances with excellent customer service. Fans, lights, switches, wires, and more — all under one roof. Your satisfaction is our priority!</p>
-    </div>
-  </section>
-
-  <!-- PRODUCTS -->
-  <section id="products" class="section">
-    <div class="container">
-      <h2>Our Products</h2>
-      <div class="products">
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200?text=Fans" alt="Fans">
-          <h3>Fans</h3>
-          <p>Ceiling, Table, and Exhaust Fans</p>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200?text=Lights" alt="Lights">
-          <h3>Lights</h3>
-          <p>LED Bulbs, Tube Lights, Decorative Lamps</p>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200?text=Wires" alt="Wires">
-          <h3>Wires</h3>
-          <p>High-quality electrical wires & cables</p>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200?text=Switches" alt="Switches">
-          <h3>Switches</h3>
-          <p>Modular switches and accessories</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p><strong>Address:</strong> Near Punjab Bus Stand, Kalanwali</p>
-      <p><strong>Phone:</strong> <a href="tel:9541795413">9541795413</a></p>
-      <p><strong>Email:</strong> singlaelectric@example.com</p>
-      <p><strong>Google Maps:</strong> <a href="https://maps.google.com" target="_blank">View Location</a></p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© <span id="year"></span> Singla Electric Store. All Rights Reserved.</p>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-whatsapp"></i></a>
-    </div>
-  </footer>
+  <div id="jokeBox"></div>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    const jokes = [
+      "Why don’t skeletons fight each other? Because they don’t have the guts 😂",
+      "I told my computer I needed a break, and it froze 🥶",
+      "Parallel lines have so much in common… it’s a shame they’ll never meet 😔",
+      "Why was the math book sad? Because it had too many problems 📚",
+      "I’m reading a book on anti-gravity. It’s impossible to put down 🚀"
+    ];
 
+    function showJoke() {
+      const joke = jokes[Math.floor(Math.random() * jokes.length)];
+      document.getElementById("jokeBox").innerText = joke;
+    }
+
+    function changeColor() {
+      const colors = ["#ff9a9e", "#fad0c4", "#a1c4fd", "#c2e9fb", "#d4fc79", "#96e6a1"];
+      document.body.style.background = `linear-gradient(-45deg, ${colors[Math.floor(Math.random()*colors.length)]}, ${colors[Math.floor(Math.random()*colors.length)]})`;
+      document.body.style.backgroundSize = "400% 400%";
+      document.body.style.animation = "gradientBG 10s ease infinite";
+    }
+  </script>
 </body>
 </html>
+
